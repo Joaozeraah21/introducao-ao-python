@@ -4,12 +4,21 @@ def cadastrar():
 
 def mostrar(lista):
     print("nome dos alunos: ")
-
+    numero = 1
+    for aluno in lista:
+        print(" - ",aluno)
+        numero += 1
+        
+        
 listaAlunos = ["Gustavo","Arthur","Daniel"]
 opcao = 0
 while opcao != 10:
     opcao = int(input("Digite 1 para mostrar os alunos cadastrados\nDigite 2 cadastrar\nDigite 3 para editar\nDigite 3 para editar\nDigite 4 para deletar"))
     if opcao == 1:
-        mostrar(lidtaAlumos)
+        mostrar(listaAlunos)
     elif opcao == 2:
         listaAlunos.append(cadastrar())
+    elif opcao == 3:
+        editar()
+    elif opcao == 4:
+        deletar()
