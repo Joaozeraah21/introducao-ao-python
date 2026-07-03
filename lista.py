@@ -19,6 +19,15 @@ while opcao != 10:
     elif opcao == 2:
         listaAlunos.append(cadastrar())
     elif opcao == 3:
-        editar()
+        mostrar(listaAlunos)
+        print("------------------------------")
+        nome = input("Digite o nome de aluno para ser editado: ")
+        posicao = listaAlunos.index(nome)
+        novoNome = input("Digite o novo nome para salvar: ")
+        listaAlunos[posicao] = novoNome
     elif opcao == 4:
-        deletar()
+        mostrar(listaAlunos)
+        print("------------------------------")
+        nome = input("Digite o nome de aluno que será deletado:")
+        listaAlunos.remove(nome)
+        print("Lista atualizada com sucesso!")
