@@ -1,0 +1,11 @@
+listaNomes = []
+listaNomes = []
+
+print("Sistema de cadastro de alunos!")
+opcao = 0
+while opcao != 10:
+    print("----------------------------")
+    opcao = int(input("Digite a opcao desejada:\n"1 - cadastrar aluno\n2 - Cadastrar nota\n3 - Alterar nota\n4 - Alterar nome\n5 - Deletar\n6 - mostrar\n10 - Sair)"")
+    if opcao == 1:
+        listaNomes.append(input("Digite o nome do aluno: "))
+        print("Aluno cadastro com sucesso!")
