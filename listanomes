@@ -5,7 +5,19 @@ print("Sistema de cadastro de alunos!")
 opcao = 0
 while opcao != 10:
     print("----------------------------")
-    opcao = int(input("Digite a opcao desejada:\n"1 - cadastrar aluno\n2 - Cadastrar nota\n3 - Alterar nota\n4 - Alterar nome\n5 - Deletar\n6 - mostrar\n10 - Sair)"")
+    opcao = int(input("Digite a opcao desejada:\n1 - cadastrar aluno\n2 - Cadastrar nota\n3 - Alterar nota\n4 - Alterar nome\n5 - Deletar\n6 - mostrar\n10 - Sair)"))
     if opcao == 1:
         listaNomes.append(input("Digite o nome do aluno: "))
         print("Aluno cadastro com sucesso!")
+    elif opcao == 2:
+        nota = 0
+        while nota <= 0.0 or nota > 10.0:
+            nota = float(input("Digite a nota do aluno: "))
+            listaNotas.append(nota)
+    elif opcao == 3:
+        for aluno in listaNomes:
+            print("Nome: ",aluno)
+        print("----------------------------")
+        nome = input("Digite o nome do usuário que você quer editar: ")
+        listaNomes.remove[nome] = input("Digite o novo nome do usuário: ")
+        print("Usuário editado com sucesso!")
