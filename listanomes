@@ -19,5 +19,15 @@ while opcao != 10:
             print("Nome: ",aluno)
         print("----------------------------")
         nome = input("Digite o nome do usuário que você quer editar: ")
-        listaNomes.remove[nome] = input("Digite o novo nome do usuário: ")
+        posicao = listaNomes.index(nome)
+        listaNomes[posicao] = input("Digite o novo nome do usuário: ")
         print("Usuário editado com sucesso!")
+    elif opcao == 4:
+        for aluno in listaNomes:
+            posicaoNota = listaNomes.index(aluno)
+            print("Nome: ",aluno," Nota: ",listaNotas[posicaoNota])
+        print("------------------------------------")
+        nome = input("Digite o nome do usuário que você quer editar a nota: ")
+        posicao = listaNomes.index(nome)
+        listaNotas[posicao] = float(input("Digite a nova nota do usuário: "))
+        print("Nota editada com sucesso!")
